@@ -1,0 +1,23 @@
+[project]
+name = "mutable-default"
+version = "0.1.0"
+description = "Detect mutable default argument values in Python code."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "mutable-default contributors" }]
+
+[project.scripts]
+mutable-default = "mutable_default.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mutable_default*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
